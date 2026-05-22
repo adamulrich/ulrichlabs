@@ -47,6 +47,10 @@ a {
   padding: 2rem 0 4rem;
 }
 
+.page-shell-narrow {
+  width: min(860px, calc(100% - 2rem));
+}
+
 .hero,
 .panel,
 .about-strip {
@@ -184,6 +188,10 @@ main {
   gap: 1.6rem;
 }
 
+.detail-layout {
+  padding-top: 2rem;
+}
+
 .panel,
 .about-strip {
   padding: 1.6rem;
@@ -204,6 +212,10 @@ main {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.card-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project-card {
@@ -262,9 +274,53 @@ main {
 
 .about-strip {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 1.4rem;
   align-items: center;
+}
+
+.about-media {
+  display: flex;
+  justify-content: center;
+}
+
+.about-bitmoji {
+  width: min(100%, 280px);
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: var(--shadow);
+}
+
+.about-bitmoji img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-panel {
+  display: grid;
+  gap: 1rem;
+  min-height: 320px;
+  align-content: center;
+}
+
+.detail-title {
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+}
+
+.detail-lede {
+  max-width: 46ch;
+  margin: 0;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 .about-text p:last-child {
@@ -277,6 +333,10 @@ main {
   .hero,
   .about-strip,
   .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid-two {
     grid-template-columns: 1fr;
   }
 
