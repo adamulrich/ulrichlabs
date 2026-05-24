@@ -51,6 +51,29 @@ a {
   width: min(860px, calc(100% - 2rem));
 }
 
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  flex-shrink: 0;
+}
+
+.site-logo img {
+  width: 100px;
+  height: auto;
+}
+
+.intro-lockup {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.intro-copy {
+  min-width: 0;
+}
+
 .hero,
 .panel,
 .about-strip {
@@ -189,7 +212,7 @@ main {
 }
 
 .detail-layout {
-  padding-top: 2rem;
+  padding-top: 0.5rem;
 }
 
 .panel,
@@ -302,7 +325,7 @@ main {
   display: grid;
   gap: 1rem;
   min-height: 320px;
-  align-content: center;
+  align-content: start;
 }
 
 .detail-title {
@@ -349,6 +372,15 @@ main {
   .page-shell {
     width: min(100% - 1rem, 100%);
     padding-top: 1rem;
+  }
+
+  .site-logo img {
+    width: 84px;
+  }
+
+  .intro-lockup {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .hero,

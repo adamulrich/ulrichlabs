@@ -1,0 +1,46 @@
+<svg width="512" height="512" viewBox="0 0 680 560" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Ulrich Labs AU gold icon</title>
+  <desc>Periodic table tile for AU element 79 gold, with orbital rings, representing Adam Ulrich / Ulrich Labs</desc>
+  <defs>
+    <style>
+      .hex-bg   { fill: #fff8e0; }
+      .ring-o   { fill: none; stroke: #e8cc80; stroke-width: 1.5; }
+      .ring-d   { fill: none; stroke: #f0dc9a; stroke-width: 1; stroke-dasharray: 5,3; }
+      .e-dot    { fill: #c8940a; }
+      .tile-bg  { fill: #fffbe8; stroke: #b07d00; stroke-width: 3; }
+      .t-num    { fill: #a06000; font-family: 'Courier New', monospace; font-size: 22px; font-weight: 700; }
+      .t-mass   { fill: #a06000; font-family: 'Courier New', monospace; font-size: 16px; }
+      .t-sym    { fill: #7a4800; font-family: Georgia, serif; font-size: 108px; font-weight: 700; }
+      .t-name   { fill: #a06000; font-family: 'Courier New', monospace; font-size: 15px; letter-spacing: 3px; }
+      .wordmark { fill: #a06000; font-family: 'Courier New', monospace; font-size: 18px; font-weight: 700; letter-spacing: 4px; }
+    </style>
+  </defs>
+
+  <polygon class="hex-bg" points="340,30 580,165 580,435 340,570 100,435 100,165" />
+
+  <ellipse class="ring-o" cx="340" cy="260" rx="228" ry="100" transform="rotate(-35 340 260)" />
+  <ellipse class="ring-o" cx="340" cy="260" rx="228" ry="100" transform="rotate(35 340 260)" />
+  <ellipse class="ring-o" cx="340" cy="260" rx="228" ry="100" transform="rotate(90 340 260)" />
+  <ellipse class="ring-d" cx="340" cy="260" rx="150" ry="65" transform="rotate(-35 340 260)" />
+  <ellipse class="ring-d" cx="340" cy="260" rx="150" ry="65" transform="rotate(35 340 260)" />
+  <ellipse class="ring-d" cx="340" cy="260" rx="150" ry="65" transform="rotate(90 340 260)" />
+
+  <circle class="e-dot" cx="340" cy="160" r="6" />
+  <circle class="e-dot" cx="545" cy="300" r="6" />
+  <circle class="e-dot" cx="195" cy="350" r="6" />
+  <circle class="e-dot" cx="470" cy="178" r="5" />
+  <circle class="e-dot" cx="148" cy="215" r="5" />
+  <circle class="e-dot" cx="340" cy="360" r="5" />
+
+  <circle class="e-dot" cx="340" cy="260" r="11" />
+
+  <rect class="tile-bg" x="195" y="125" width="290" height="270" rx="12" />
+
+  <text class="t-num" x="220" y="163">79</text>
+  <text class="t-mass" x="460" y="163" text-anchor="end">196.97</text>
+  <text class="t-sym" x="340" y="295" text-anchor="middle">Au</text>
+  <text class="t-name" x="340" y="340" text-anchor="middle">Gold</text>
+
+  <text class="wordmark" x="340" y="450" text-anchor="middle">ULRICH LABS</text>
+
+</svg>
