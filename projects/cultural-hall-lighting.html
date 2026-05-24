@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultural Hall Lighting Project | Ulrich Labs</title>
+  <meta
+    name="description"
+    content="A DIY cultural hall event lighting system using 48 fairy-light strands, printed spools, and a suspended circular rig."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" href="../ulrichlabs-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <main class="detail-layout">
+      <section class="panel">
+        <div class="project-hero-layout">
+          <div class="project-hero-copy">
+            <div class="intro-lockup">
+              <a class="site-logo" href="../index.html" aria-label="Ulrich Labs home">
+                <img src="../ulrichlabs-au-icon.svg" alt="Ulrich Labs AU icon">
+              </a>
+              <div class="intro-copy">
+                <p class="eyebrow">Physical Project</p>
+                <h1 class="detail-title">Cultural Hall Lighting Project</h1>
+                <p class="detail-lede">
+                  A reusable event-lighting rig built from 48 extra-long LED fairy
+                  light strands, printed spools, a circular support ring, and a
+                  suspended power platform.
+                </p>
+                <div class="detail-actions">
+                  <a class="button button-primary" href="https://github.com/adamulrich/CulturalHallLighting/blob/main/README.md" target="_blank" rel="noreferrer">View original README</a>
+                  <a class="button button-secondary" href="https://youtu.be/23eHEIdkHAk" target="_blank" rel="noreferrer">Watch spool demo</a>
+                  <a class="button button-secondary" href="../index.html">Back to home</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/IMG_20231216_152945.jpg"
+              alt="Completed cultural hall lighting rig glowing overhead"
+            >
+            <figcaption>
+              The finished system was first built for a wedding reception and has
+              since been reused for Christmas parties and other large events.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>Detailed build guidance</h2>
+        </div>
+        <div class="media-copy-layout">
+          <div class="intro-guidance">
+            <h3>How the full system is designed</h3>
+            <p>
+              This system contains 48 12v 100 foot "fairy light" LED strands. Each
+              strand has 3 lights per foot for a total of 300 lights on each strand,
+              and draws 380 milliAmps. If you want to keep it to a 15 amp draw, you
+              would reduce the number of strands to 39. At 48, it draws 18.24 amps,
+              so you would need a 20 amp circuit and 20 amp power cord.
+            </p>
+            <p>
+              Each strand is wound onto a 3d printed spool. 12 spools are mounted on
+              a 90 degree arc of flexible piping, using PEX in this build. Four arcs
+              are joined with pipe tees and clamped together with hose clamps to form
+              a circle, then mounted to a center plywood platform. The platform has
+              48 pigtails in 4 banks of 12, ready to be connected after the needed
+              amount of lighting has been stretched out.
+            </p>
+            <p>
+              The spools have cutout arcs to let heat dissipate, since the unused
+              portion of each strand can stay tightly wrapped while still illuminated
+              and can get noticeably warm.
+            </p>
+            <p>
+              Any variations you see in the photos reflect later improvements. Some
+              pictures still show the earlier 100W supply and daisy-chained
+              distribution blocks. After testing, the build moved to a 250W supply
+              and a 6-header distribution block so the four lighting headers run in
+              parallel, keeping each branch around 4.6 amps instead of pushing the
+              full 18.2 amps through the first block.
+            </p>
+            <p>
+              Another change was moving from plastic tees to metal tees. The exact
+              hardware can vary, but the overall design principles stay the same.
+            </p>
+            <p>
+              Another reinforcement change was adding two 3-foot lengths of 3/8-inch
+              threaded rod to strengthen the crossbeams. One rod stays full length,
+              and the other is cut into two shorter sections to fill out the other
+              half of the cross.
+            </p>
+          </div>
+          <figure class="project-figure project-figure-portrait project-figure-capped">
+            <img
+              src="../images/cultural-hall-lighting/assembled-lit.jpg"
+              alt="Bench test of the assembled lighting ring with the spools lit up"
+            >
+            <figcaption>
+              A bench test of the assembled ring with the lighting strands powered,
+              showing the center platform, distribution blocks, and wrapped strands
+              lit at full brightness.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">At A Glance</p>
+          <h2>Key build numbers</h2>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <strong>48</strong>
+            <span>LED strands, each 100 feet long and wound onto its own spool.</span>
+          </div>
+          <div class="stat-card">
+            <strong>18.24A</strong>
+            <span>Total draw with all strands powered, so the design expects a 20A circuit.</span>
+          </div>
+          <div class="stat-card">
+            <strong>4 x 12</strong>
+            <span>Four ring sections, each carrying twelve spools on a 90-degree arc.</span>
+          </div>
+          <div class="stat-card">
+            <strong>300</strong>
+            <span>LEDs per strand, based on three lights per foot across the full run.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Parts</p>
+          <h2>Main materials and hardware</h2>
+        </div>
+        <div class="checklist-grid">
+          <div class="list-card">
+            <h3>Electrical</h3>
+            <ul>
+              <li><a href="https://www.amazon.com/gp/product/B07Y61R8SR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1" target="_blank" rel="noreferrer">12V power supply rated for 20.8 amps</a></li>
+              <li><a href="https://www.amazon.com/gp/product/B07BRKGZYN/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&th=1" target="_blank" rel="noreferrer">48 male 5.5 x 2.1 mm pigtails</a></li>
+              <li><a href="https://www.amazon.com/gp/product/B08TBXQ7H6/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1" target="_blank" rel="noreferrer">Four 12-header distribution blocks</a></li>
+              <li><a href="https://www.amazon.com/gp/product/B09D3BV22M/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1" target="_blank" rel="noreferrer">One 6-header distribution block</a></li>
+              <li>50-foot 20A power cord</li>
+              <li>48 fairy-light strands with matching female connectors</li>
+            </ul>
+          </div>
+          <div class="list-card">
+            <h3>Platform And Ring</h3>
+            <ul>
+              <li>Two 15-inch by 15-inch plywood panels</li>
+              <li>Flexible 1/2-inch PEX for the ring arcs</li>
+              <li>Rigid 3/4-inch tube for supports</li>
+              <li>Two 3-foot lengths of 3/8-inch threaded rod, with one full piece and one rod cut into two sections for crossbeam reinforcement</li>
+              <li>Four 1/2-inch metal PEX barb tees</li>
+              <li>Four pigtail retention blocks</li>
+              <li>Twelve small hose clamps</li>
+              <li>Forty-eight printed spools and sixty spacers</li>
+            </ul>
+          </div>
+          <div class="list-card">
+            <h3>Rigging</h3>
+            <ul>
+              <li>Four eye bolts with washers and nuts</li>
+              <li><a href="https://www.amazon.com/gp/product/B08FY86482/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&th=1" target="_blank" rel="noreferrer">Vinyl-coated wire</a></li>
+              <li>Heavy-duty carabiners and quick links</li>
+              <li>50-pound pulley</li>
+              <li>100 feet of quality rope</li>
+              <li>Cable ties, clamps, and small hardware for strain relief</li>
+            </ul>
+            <h3>Printable Parts</h3>
+            <ul>
+              <li><a href="https://github.com/adamulrich/CulturalHallLighting/blob/main/spool.3mf" target="_blank" rel="noreferrer">Spool model</a></li>
+              <li><a href="https://github.com/adamulrich/CulturalHallLighting/blob/main/spool_clip.3mf" target="_blank" rel="noreferrer">Spool clip model</a></li>
+              <li><a href="https://github.com/adamulrich/CulturalHallLighting/blob/main/spool_spacer.3mf" target="_blank" rel="noreferrer">Spacer model</a></li>
+              <li><a href="https://github.com/adamulrich/CulturalHallLighting/blob/main/cord_clamp3.3mf" target="_blank" rel="noreferrer">Pigtail retention block model</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Electrical System</p>
+          <h2>Power distribution and cable management</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The later version of the build uses a 250W supply and a six-header
+            distribution block so the four twelve-port blocks run in parallel rather
+            than pushing the full current through one chained path.
+          </p>
+          <p>
+            The pigtails are taped for a cleaner finish and restrained with printed
+            retention blocks so the spool cables cannot yank loose from the power
+            blocks during setup.
+          </p>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/IMG_20231219_084156.jpg"
+              alt="Power distribution blocks and wired pigtails on the platform"
+            >
+            <figcaption>
+              The top platform carries the power supply and distribution blocks for
+              all forty-eight lighting strands.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/IMG_20211211_223632.jpg"
+              alt="Neatly organized pigtails and platform wiring"
+            >
+            <figcaption>
+              Hair ties and simple anchor points keep the pigtails tidy when the rig
+              is stored or partially deployed.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Platform Assembly</p>
+          <h2>Sandwiching the center support</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The center platform is made from two plywood squares with the ring
+            supports trapped between them. Cable-tie holes in the bottom panel hold
+            the flattened and overlapped support arms in place before the top panel is
+            tied on.
+          </p>
+          <p>
+            A later improvement was adding two 3-foot, 3/8-inch threaded rods to
+            strengthen the crossbeams. One rod remains full length, while the second
+            rod is cut into two shorter pieces to reinforce the remaining half of the
+            cross.
+          </p>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/IMG_20211204_191408.jpg"
+              alt="Bottom plywood platform with ring supports fastened in place"
+            >
+            <figcaption>
+              The lower platform anchors the support arms and establishes the ring
+              geometry for the full assembly.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/IMG_20211211_223632.jpg"
+              alt="Top and bottom platform pieces strapped together around supports"
+            >
+            <figcaption>
+              Once the supports are secured, the top platform goes on and becomes the
+              mounting surface for the electrical gear.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Spools And Spacers</p>
+          <h2>Printed parts that make setup repeatable</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Every strand is transferred from its shipping card onto a printed spool,
+            with a clip glued to the side to hold the connector. The spool vents help
+            shed heat when long unused sections remain wrapped and illuminated.
+          </p>
+          <p>
+            The guide also recommends using a drill-driven jig to wind the spools
+            efficiently without overstressing the wire if something binds. See the
+            <a href="https://youtu.be/23eHEIdkHAk" target="_blank" rel="noreferrer">video demo</a>.
+          </p>
+          <p>
+            That same drill brush setup can also be used after an event to roll the
+            strands back onto the spools after an event.
+          </p>
+          <p>
+            The printed part files are available here:
+            <a href="https://github.com/adamulrich/CulturalHallLighting/blob/main/spool.3mf" target="_blank" rel="noreferrer">spool</a>,
+            <a href="https://github.com/adamulrich/CulturalHallLighting/blob/main/spool_clip.3mf" target="_blank" rel="noreferrer">spool clip</a>,
+            <a href="https://github.com/adamulrich/CulturalHallLighting/blob/main/spool_spacer.3mf" target="_blank" rel="noreferrer">spacer</a>,
+            and
+            <a href="https://github.com/adamulrich/CulturalHallLighting/blob/main/cord_clamp3.3mf" target="_blank" rel="noreferrer">pigtail retention block</a>.
+          </p>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/IMG_20231219_110943.jpg"
+              alt="Close-up of printed lighting spools mounted on the ring"
+            >
+            <figcaption>
+              Printed spools and spacers keep each strand organized and free-spinning
+              along the ring.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/spacers.jpg"
+              alt="Printed spools and spacers mounted in sequence along one ring section"
+            >
+            <figcaption>
+              The spacer layout keeps neighboring spools separated so they can spin
+              freely without rubbing while the strands are deployed.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/jig photo.png"
+              alt="A spool loaded with lights and set up for the drill-brush winding jig"
+            >
+            <figcaption>
+              The drill-brush jig used for winding can also help roll the strands
+              back onto the spools after an event.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="rigging-layout">
+          <div class="rigging-copy">
+            <div class="section-heading">
+              <p class="eyebrow">Rigging</p>
+              <h2>Suspending the ring safely</h2>
+            </div>
+            <div class="prose">
+              <p>
+                Four eye bolts pass through the platform sandwich and connect to a simple
+                suspension rig made from coated wire, crimps, carabiners, and quick
+                links. A pulley and rope allow the full ring to be raised once it is
+                centered on the floor.
+              </p>
+            </div>
+          </div>
+          <figure class="project-figure project-figure-portrait project-figure-fill">
+            <img
+              src="../images/cultural-hall-lighting/IMG_20211212_173622.jpg"
+              alt="Suspension rig attached to the platform with eye bolts and wire"
+            >
+            <figcaption>
+              The hanging hardware turns the platform into a liftable centerpiece for
+              the entire lighting ring.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Installation</p>
+          <h2>Deploying the lights in the room</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Once the pulley is hung, the rig can be staged on a table so the spools
+            turn freely while each strand is walked out to the wall or to a suspended
+            nylon line. The original notes recommend leaving a little slack and
+            avoiding over-tension at the far-end anchor points.
+          </p>
+          <p>
+            For halls without enough built-in attachment points, the strands can be
+            clipped to nylon support lines stretched across the room.
+          </p>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/IMG_20231214_212618.jpg"
+              alt="Fully assembled cultural hall lighting rig suspended during setup"
+            >
+            <figcaption>
+              A fully assembled version of the rig, with the ring, spools, center
+              platform, and hanging system all connected before final light
+              placement.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/cultural-hall-lighting/IMG_20211219_200424.jpg"
+              alt="Installed lighting across the room from one angle"
+            >
+            <figcaption>
+              One finished view of the installed strands stretched across the hall.
+            </figcaption>
+          </figure>
+        </div>
+        <figure class="project-figure">
+          <img
+            src="../images/cultural-hall-lighting/deployed-view-3.jpg"
+            alt="Another deployed view of the lighting system across the cultural hall"
+          >
+          <figcaption>
+            Another deployed view showing the finished lighting pattern spread across
+            the full cultural hall for an event setup.
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+  </div>
+  <script src="../lightbox.js"></script>
+</body>
+</html>
