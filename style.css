@@ -275,6 +275,12 @@ main {
   color: var(--muted);
 }
 
+.project-card p.card-note {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--accent-strong);
+}
+
 .project-card span:not(.card-tag) {
   color: var(--text);
 }
