@@ -212,6 +212,7 @@ h2 {
 
 main {
   display: grid;
+  align-items: start;
   gap: 1.6rem;
 }
 
@@ -238,6 +239,8 @@ main {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  grid-auto-rows: max-content;
   gap: 1rem;
 }
 
@@ -247,8 +250,9 @@ main {
 
 .project-card {
   display: grid;
+  align-content: start;
   gap: 0.7rem;
-  min-height: 100%;
+  min-width: 0;
   padding: 1.2rem;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -623,6 +627,56 @@ main {
 }
 
 @media (max-width: 1120px) {
+  .hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .hero-copy,
+  .hero-media {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hero-copy {
+    padding-right: 13rem;
+  }
+
+  .site-logo img {
+    width: 82px;
+  }
+
+  .intro-lockup {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .hero-media {
+    padding: 0;
+    justify-self: end;
+    align-self: start;
+    margin-top: 0.35rem;
+    justify-items: end;
+  }
+
+  .portrait-card {
+    width: 200px;
+    border-radius: 24px;
+  }
+
+  .portrait-card img {
+    display: block;
+    height: 200px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center 18%;
+  }
+
+  h1 {
+    max-width: 12ch;
+  }
+
   .media-copy-layout {
     grid-template-columns: 1fr;
   }
@@ -632,8 +686,17 @@ main {
   }
 }
 
+@media (max-width: 900px) {
+  .hero-copy {
+    padding-right: 11.5rem;
+  }
+
+  h1 {
+    max-width: 9.5ch;
+  }
+}
+
 @media (max-width: 960px) {
-  .hero,
   .about-strip,
   .card-grid,
   .project-hero-layout,
@@ -648,9 +711,6 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .hero-media {
-    padding: 0;
-  }
 }
 
 @media (max-width: 640px) {
@@ -671,12 +731,13 @@ main {
   }
 
   .site-logo img {
-    width: 84px;
+    width: 72px;
   }
 
   .intro-lockup {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.7rem;
+    align-items: start;
   }
 
   .hero,
@@ -692,13 +753,53 @@ main {
 
   .hero-actions {
     flex-direction: column;
+    clear: both;
   }
 
   .button {
     width: 100%;
   }
 
+  .hero-copy {
+    padding-right: 9.5rem;
+    padding-top: 0;
+  }
+
+  .hero-media {
+    margin-top: 0;
+  }
+
+  .portrait-card {
+    width: 140px;
+  }
+
   .portrait-card img {
-    height: auto;
+    height: 140px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-copy,
+  .hero-media {
+    grid-row: auto;
+  }
+
+  .hero-copy {
+    padding-right: 0;
+  }
+
+  .hero-media {
+    justify-self: center;
+    align-self: start;
+    justify-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .portrait-card {
+    width: min(100%, 180px);
+  }
+
+  .portrait-card img {
+    height: 180px;
   }
 }
