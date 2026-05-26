@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcade Cabinets | Ulrich Labs</title>
+  <meta
+    name="description"
+    content="A two-player MAME control panel cabinet build with an I-PAC Ultimate I/O board, Ultimarc controls, a small-form-factor PC, and a LaunchBox/BigBox front end."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" href="../ulrichlabs-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <main class="detail-layout">
+      <section class="panel">
+        <div class="project-hero-layout">
+          <div class="project-hero-copy">
+            <div class="intro-lockup">
+              <a class="site-logo" href="../index.html" aria-label="Ulrich Labs home">
+                <img src="../ulrichlabs-au-icon.svg" alt="Ulrich Labs AU icon">
+              </a>
+              <div class="intro-copy">
+                <p class="eyebrow">Physical Project</p>
+                <h1 class="detail-title">Arcade Cabinet</h1>
+                <p class="detail-lede">
+                  A two-player tabletop arcade control panel running LaunchBox/BigBox
+                  on a small-form-factor PC, wired up with an Ultimarc I-PAC Ultimate
+                  I/O board, Ultimarc joysticks, buttons, a spinner, and a trackball.
+                </p>
+                <div class="detail-actions">
+                  <a class="button button-primary" href="https://www.ultimarc.com/control-interfaces/i-pacs/i-pac-ultimate-i-o/" target="_blank" rel="noreferrer">View I-PAC Ultimate I/O</a>
+                  <a class="button button-secondary" href="https://www.launchbox-app.com/" target="_blank" rel="noreferrer">LaunchBox/BigBox</a>
+                  <a class="button button-secondary" href="../index.html">Back to home</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figure class="project-figure project-figure-portrait project-figure-fill">
+            <img
+              src="../images/arcade-cabinets/cabinet-in-use.jpg"
+              alt="The arcade cabinet on a table beneath a TV running the LaunchBox/BigBox arcade UI on the Centipede game"
+            >
+            <figcaption>
+              The cabinet in its usual spot, with LaunchBox/BigBox up on the TV — here
+              parked on Centipede.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>What the cabinet is</h2>
+        </div>
+        <div class="prose">
+          <p>
+            This is a two-player tabletop arcade control panel built from a Monster
+            Arcades cabinet kit on Etsy, finished in navy with diagonal lime-green
+            stripes and matching T-molding. It runs LaunchBox/BigBox on a small-form-factor PC tucked into
+            the back of the box, with everything routed through an Ultimarc I-PAC
+            Ultimate I/O board for keyboard, gamepad, trackball, and spinner inputs.
+          </p>
+          <p>
+            The layout is symmetrical for two-player games: joystick and six action
+            buttons per side, four admin buttons in front of each joystick, plus a
+            shared trackball and spinner in the center with coin, start, pause, and
+            exit buttons across the top.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Parts</p>
+          <h2>Main parts and hardware</h2>
+        </div>
+        <div class="checklist-grid">
+          <div class="list-card">
+            <h3>Computer And Software</h3>
+            <ul>
+              <li>Small-form-factor PC (currently a <a href="https://www.peladn.com/" target="_blank" rel="noreferrer">PELADN</a> Ryzen 5 5600H mini PC) mounted inside the cabinet</li>
+              <li><a href="https://www.launchbox-app.com/" target="_blank" rel="noreferrer">LaunchBox with BigBox</a> as the front end for MAME and other emulators</li>
+              <li>Wireless keyboard and HDMI cable stored inside the cabinet for setup and admin</li>
+            </ul>
+          </div>
+          <div class="list-card">
+            <h3>Controls And I/O</h3>
+            <ul>
+              <li><a href="https://www.ultimarc.com/control-interfaces/i-pacs/i-pac-ultimate-i-o/" target="_blank" rel="noreferrer">Ultimarc I-PAC Ultimate I/O</a> controller board</li>
+              <li>Ultimarc joysticks (one per player)</li>
+              <li>Ultimarc illuminated buttons for the two six-button clusters and admin row</li>
+              <li>Ultimarc spinner</li>
+              <li>Ultimarc trackball</li>
+            </ul>
+          </div>
+          <div class="list-card">
+            <h3>Cabinet And Finish</h3>
+            <ul>
+              <li><a href="https://www.etsy.com/listing/1383574478/2-player-arcade-control-panel-kit-full" target="_blank" rel="noreferrer">Two-player arcade control panel kit</a> from Monster Arcades on Etsy</li>
+              <li><a href="https://www.amazon.com/20ft-Plastic-T-Molding-Bright-Green/dp/B07G7DJBWK" target="_blank" rel="noreferrer">Bright green 3/4-inch T-molding</a> around the panel edge</li>
+              <li>Navy paint with diagonal lime-green accent stripes</li>
+              <li>Inset power inlet, lit rocker switch, and HDMI/Ethernet pass-through on the back</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Panel And Drilling</p>
+          <h2>Starting with a drilled, painted panel</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The kit ships as a flat panel and a separate plywood box. The first step was
+            painting the panel navy, masking the diagonal stripes in lime green, and
+            wrapping the edge in matching T-molding. From the underside, the panel is
+            just an array of clean holes waiting for the Ultimarc hardware.
+          </p>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170528_22_10_36_Rich.jpg"
+              alt="Painted control panel with buttons and joysticks dry-fitted in place"
+            >
+            <figcaption>
+              The painted control panel dry-fitted with joysticks and buttons before
+              wiring begins.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170528_22_10_48_Rich.jpg"
+              alt="Underside of the panel showing button mounts and the empty plywood box"
+            >
+            <figcaption>
+              The underside of the panel with switch bodies seated, hinged open above
+              the empty plywood box that will house the PC.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Wiring</p>
+          <h2>Running every input back to the I-PAC</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Every button, joystick microswitch, trackball axis, and spinner encoder
+            runs back to the I-PAC Ultimate I/O. The board lets the PC see the panel
+            as a keyboard, two gamepads, a mouse for the trackball, and an analog
+            spinner all at once, with per-input mapping configured in the Ultimarc
+            software.
+          </p>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170529_23_32_20_Rich.jpg"
+              alt="Close-up of the Ultimarc I-PAC Ultimate I/O board with screw terminals wired up"
+            >
+            <figcaption>
+              The I-PAC Ultimate I/O is the hub for every input. Color-coded leads run
+              from each terminal block out to a button, joystick, or sensor.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170529_20_54_54_Rich.jpg"
+              alt="Detailed view of partially completed wiring around the I-PAC board"
+            >
+            <figcaption>
+              Daisy-chained grounds and labeled jumpers keep the wiring traceable when
+              something needs to be re-mapped later.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170529_20_54_43_Rich.jpg"
+              alt="Wider view of the wired panel underside with joysticks, trackball, and spinner installed"
+            >
+            <figcaption>
+              The center cluster: trackball, spinner, and the two joystick assemblies
+              all sharing a common ground bus.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170529_23_32_29_Rich.jpg"
+              alt="Full panel underside showing complete wiring across both player sides"
+            >
+            <figcaption>
+              The complete panel underside with both player sides wired in mirrored
+              layouts.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170529_23_33_05_Rich.jpg"
+              alt="Another full underside view showing all wiring and control hardware"
+            >
+            <figcaption>
+              A second pass across the harness, checking that every wire reaches its
+              correct terminal before powering up.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170529_23_49_22_Rich.jpg"
+              alt="Closer view of finished wiring with cable ties dressing the loom"
+            >
+            <figcaption>
+              Cable ties and labeled bundles tame the loom so the panel can still close
+              cleanly into the cabinet.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170610_17_59_37_Rich.jpg"
+              alt="Wired panel laid flat on a table showing the I-PAC and harnesses"
+            >
+            <figcaption>
+              The harness laid flat for a final inspection before the panel goes back
+              onto the cabinet box.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170610_21_42_58_Rich.jpg"
+              alt="Cabinet open with wired panel and PC starting to land in the box"
+            >
+            <figcaption>
+              Panel and box reunited, with the PC bay beginning to take shape inside
+              the cabinet.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">PC Bay</p>
+          <h2>A small-form-factor PC tucked inside</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The cabinet base doubles as a tidy enclosure for a small-form-factor PC,
+            its power brick, a wireless keyboard receiver, and a coiled HDMI cable.
+            A back-panel cutout exposes the PC's HDMI, Ethernet, and USB ports, plus a
+            lit rocker switch and a power inlet for a standard PC cord. The PC has
+            been upgraded over time and is currently a PELADN Ryzen 5 5600H mini PC.
+          </p>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170701_18_52_08_Rich.jpg"
+              alt="Inside the PC bay with mini PC, wireless keyboard, and coiled HDMI cable"
+            >
+            <figcaption>
+              The everything-you-need bay: mini PC, wireless keyboard, and a coiled
+              HDMI cable that lives with the cabinet.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170614_21_56_50_Rich.jpg"
+              alt="Cabinet on its side, showing the back panel power inlet, lit switch, and ports"
+            >
+            <figcaption>
+              Back panel detail: a lit rocker switch, a panel-mount power inlet, and
+              the PC's HDMI and network ports passed through.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Polishing</p>
+          <h2>Final tidy-up and storage</h2>
+        </div>
+        <div class="prose">
+          <p>
+            With everything wired and tested, the last pass was cable management,
+            dressing the harness flat against the panel, and finding homes inside the
+            cabinet for the wireless keyboard and HDMI cable so the whole setup is
+            self-contained when stored.
+          </p>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170619_09_10_57_Rich.jpg"
+              alt="Cabinet open with tidied wiring and a wireless keyboard inside the bay"
+            >
+            <figcaption>
+              Final dress-up of the harness with the wireless keyboard tucked into its
+              spot in the bay.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170619_09_12_37_Rich.jpg"
+              alt="Cabinet open with coiled HDMI and keyboard stored inside"
+            >
+            <figcaption>
+              The cabinet stores its own HDMI cable and keyboard so it can be set up
+              anywhere with a power outlet and a TV.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170619_09_13_22_Rich.jpg"
+              alt="Closed cabinet from above showing the finished playing surface"
+            >
+            <figcaption>
+              The closed cabinet from above, ready for two players.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170614_21_57_07_Rich.jpg"
+              alt="Finished two-player arcade control panel with joysticks, trackball, spinner, and lit power button"
+            >
+            <figcaption>
+              A three-quarter view of the finished panel, showing both joysticks,
+              the six-button clusters, trackball, spinner, and the lit power switch
+              on the back.
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img
+              src="../images/arcade-cabinets/WP_20170630_15_48_14_Rich.jpg"
+              alt="Another angle of the cabinet stood up with internal storage visible"
+            >
+            <figcaption>
+              Opening the cabinet on the piano hinge, the back of the control panel and PC are easy to access
+              for maintenance, with the HDMI coil and PC sitting clear of the wiring
+              harness above.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Software Configuration</p>
+          <h2>The three layers that make it play</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The cabinet runs three layers of software stacked on top of each other:
+            WinIPAC to program the controller board, MAME to actually run the games,
+            and BigBox on top to pull everything into a controller-friendly front
+            end.
+          </p>
+        </div>
+        <div class="software-bullet">
+          <div class="software-bullet-logo">
+            <img src="../images/arcade-cabinets/ipac-logo.png" alt="Ultimarc I-PAC logo">
+          </div>
+          <div>
+            <h3>WinIPAC</h3>
+            <p>
+              <a href="https://www.ultimarc.com/control-interfaces/i-pacs/i-pac-ultimate-i-o/" target="_blank" rel="noreferrer">WinIPAC</a>
+              is used to program the I-PAC Ultimate I/O so every button, joystick
+              microswitch, trackball axis, and spinner pulse maps to the correct
+              keyboard or gamepad input. This is a one-time setup &mdash; once the
+              mapping is written to the board, the I-PAC remembers it and the PC
+              just sees a normal set of input devices.
+            </p>
+          </div>
+          <figure class="software-bullet-figure">
+            <img src="../images/arcade-cabinets/winipac-screenshot.png" alt="WinIPAC V2 configuration utility showing the I-PAC input mapping interface">
+          </figure>
+        </div>
+        <div class="software-bullet">
+          <div class="software-bullet-logo">
+            <img src="../images/arcade-cabinets/mame-logo.png" alt="MAME logo">
+          </div>
+          <div>
+            <h3>MAME</h3>
+            <p>
+              <a href="https://www.mamedev.org/" target="_blank" rel="noreferrer">MAME</a>
+              does the actual emulation. Most options &mdash; video, audio, default
+              input bindings, and global control mappings &mdash; are configured
+              once at the MAME level, and every game inherits those defaults. When
+              a specific title needs different controls, DIP switches, or screen
+              orientation, those tweaks live in a small per-game override file
+              rather than disturbing the global config.
+            </p>
+            <p>
+              MAME also needs a matching ROM set for every game it plays, and ROM
+              definitions evolve with MAME itself &mdash; a set dumped for one
+              version often won't load cleanly on a much newer build. The usual
+              approach is to pin a specific MAME version and pair it with a ROM
+              set from the same era so every romset name and CRC lines up. This
+              cabinet runs against an
+              <a href="https://archive.org/details/MAME_2015_arcade_romsets" target="_blank" rel="noreferrer">archived MAME 2015 ROM set</a>.
+            </p>
+          </div>
+          <figure class="software-bullet-figure">
+            <img src="../images/arcade-cabinets/mame-screenshot.webp" alt="MAME running an arcade game">
+          </figure>
+        </div>
+        <div class="software-bullet">
+          <div class="software-bullet-logo">
+            <img src="../images/arcade-cabinets/launchbox-logo.png" alt="LaunchBox logo">
+          </div>
+          <div>
+            <h3>LaunchBox with BigBox</h3>
+            <p>
+              On top of MAME,
+              <a href="https://www.launchbox-app.com/" target="_blank" rel="noreferrer">LaunchBox with BigBox</a>
+              is the front end. BigBox pulls in cover art, marquees, gameplay
+              videos, and metadata for the collection, presents a
+              controller-friendly navigation, and launches the right MAME command
+              line when a game is picked &mdash; so the whole experience from boot
+              to gameplay can be driven entirely from the panel.
+            </p>
+          </div>
+          <figure class="software-bullet-figure">
+            <img src="../images/arcade-cabinets/bigbox-logo.png" alt="BigBox logo">
+          </figure>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../lightbox.js"></script>
+</body>
+</html>
