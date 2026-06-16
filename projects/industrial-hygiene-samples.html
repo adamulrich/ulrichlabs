@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrial Hygiene Sample Management PWA | Ulrich Labs</title>
+  <meta
+    name="description"
+    content="HSC Samples — a progressive web app for industrial hygiene project and sample data collection, with cloud sync, QR-coded labels, and PDF reporting."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" href="../ulrichlabs-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <main class="detail-layout">
+      <section class="panel">
+        <div class="project-hero-layout">
+          <div class="project-hero-copy">
+            <div class="intro-lockup">
+              <a class="site-logo" href="../index.html" aria-label="Ulrich Labs home">
+                <img src="../ulrichlabs-au-icon.svg" alt="Ulrich Labs AU icon">
+              </a>
+              <div class="intro-copy">
+                <p class="eyebrow">Software Project</p>
+                <h1 class="detail-title">HSC Samples</h1>
+                <p class="detail-lede">
+                  A progressive web app for industrial hygiene professionals
+                  &mdash; create projects, collect sample data in the field,
+                  sync to the cloud, and generate finished PDF reports.
+                </p>
+                <div class="detail-actions">
+                  <a class="button button-primary" href="https://github.com/adamulrich/hsc_samples" target="_blank" rel="noreferrer">View on GitHub</a>
+                  <a class="button button-secondary" href="../index.html">Back to home</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>Project and Sample Data Collector</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Industrial hygiene work involves a steady rhythm of going out to a
+            site, taking air or surface samples, labeling them, sending them
+            off to a lab, and eventually reporting the results back to the
+            client. HSC Samples is built to keep all of that organized in one
+            place &mdash; on a phone or tablet in the field, on a laptop in
+            the office &mdash; without needing a heavy desktop application or
+            a custom backend per company.
+          </p>
+          <p>
+            The app installs as a PWA so it runs full-screen on iOS or
+            Android, with offline support via a service worker so a brief
+            loss of signal in a basement or industrial space doesn't lose any
+            data. Cloud sync is opt-in: projects can stay local on a device
+            until the user logs in and pushes them up.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Screenshots</p>
+          <h2>The app, on a phone</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="project-figure project-figure-portrait">
+            <img src="../images/hsc-samples/screenshot1.png" alt="HSC Samples home screen with logo and main action buttons">
+            <figcaption>Home screen &mdash; load, open, or create a project, sync to the cloud, or edit company info.</figcaption>
+          </figure>
+          <figure class="project-figure project-figure-portrait">
+            <img src="../images/hsc-samples/screenshot2.png" alt="Project Information view with project name, comments, and a table of collected samples">
+            <figcaption>Project view &mdash; each project holds a list of samples with date, location, type, serial, and analyses.</figcaption>
+          </figure>
+          <figure class="project-figure project-figure-portrait">
+            <img src="../images/hsc-samples/screenshot3.png" alt="Sample edit form with date, person/location, type, serial number, duration, and analyses type fields">
+            <figcaption>Sample edit form &mdash; date, location, sample type, serial, duration, and the analyses to request.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Features</p>
+          <h2>What it does</h2>
+        </div>
+        <div class="checklist-grid">
+          <div class="list-card">
+            <h3>Projects</h3>
+            <ul>
+              <li>Create and save a project per site or job</li>
+              <li>Open a saved project to pick up where you left off</li>
+              <li>Quick-resume of the current in-progress project from the home screen</li>
+            </ul>
+          </div>
+          <div class="list-card">
+            <h3>Samples</h3>
+            <ul>
+              <li>Add samples under each project with the metadata needed for chain of custody</li>
+              <li>QR-coded labels for fast scanning when samples come back from the lab</li>
+            </ul>
+          </div>
+          <div class="list-card">
+            <h3>Cloud and Reports</h3>
+            <ul>
+              <li>Optional cloud sync with login, so projects can move between devices</li>
+              <li>Generate finished PDF reports straight from the collected data</li>
+              <li>Company-info admin for branding the output</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Stack</p>
+          <h2>How it's built</h2>
+        </div>
+        <div class="prose">
+          <p>
+            HSC Samples is intentionally simple: a static HTML/JavaScript PWA
+            with Bootstrap for layout, a service worker for offline support,
+            and a web manifest for install-to-home-screen behavior. The
+            backend uses Parse (Back4App) for authentication and cloud sync,
+            QR codes are rendered client-side for the labels, and PDF reports
+            are generated client-side from HTML templates.
+          </p>
+          <p>
+            The app is hosted on GitHub Pages directly from the
+            <a href="https://github.com/adamulrich/hsc_samples" target="_blank" rel="noreferrer">repository's <code>main</code> branch</a>,
+            so deployment is a push.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../lightbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitch Ledger — Small Business CRM PWA | Ulrich Labs</title>
+  <meta
+    name="description"
+    content="Pitch Ledger — a progressive web app CRM for a piano tuning business, with customer records, appointments, quarterly tax rollups, email/SMS invoicing, and marketing-blast targeting."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" href="../ulrichlabs-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <main class="detail-layout">
+      <section class="panel">
+        <div class="project-hero-layout">
+          <div class="project-hero-copy">
+            <div class="intro-lockup">
+              <a class="site-logo" href="../index.html" aria-label="Ulrich Labs home">
+                <img src="../ulrichlabs-au-icon.svg" alt="Ulrich Labs AU icon">
+              </a>
+              <div class="intro-copy">
+                <p class="eyebrow">Software Project</p>
+                <h1 class="detail-title">Pitch Ledger</h1>
+                <p class="detail-lede">
+                  A small-business CRM as a progressive web app, originally
+                  built for a piano tuning business. Customer records,
+                  appointment tracking, quarterly tax rollups, email/SMS
+                  invoicing with a Venmo payment link, and a marketing-blast
+                  tool that knows not to spam recent customers.
+                </p>
+                <div class="detail-actions">
+                  <a class="button button-primary" href="https://github.com/adamulrich/customer-management" target="_blank" rel="noreferrer">View on GitHub</a>
+                  <a class="button button-secondary" href="../index.html">Back to home</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>What it is</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Pitch Ledger is a lightweight CRM for a one-or-two-person service
+            business. The first deployment is for a piano tuner, but the data
+            model and workflow translate directly to other appointment-driven
+            small businesses: lawn care, mobile repair, tutoring, in-home
+            services.
+          </p>
+          <p>
+            The app installs as a PWA so it lives on a phone home screen and
+            runs full-screen, with a Back4App-hosted Parse backend providing
+            authentication and per-user data isolation. Every record is saved
+            with an ACL tied to the logged-in user, so two businesses sharing
+            the same deployment never see each other's customers.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Screenshots</p>
+          <h2>The app, on a phone</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="project-figure project-figure-portrait">
+            <img src="../images/pitch-ledger/screenshot-1.png" alt="Pitch Ledger Customers tab showing the New customer form with name, phone, address, email, and contact preference fields">
+            <figcaption>Customers &mdash; add a new customer with contact info, reminder preferences, and notes.</figcaption>
+          </figure>
+          <figure class="project-figure project-figure-portrait">
+            <img src="../images/pitch-ledger/screenshot-2.png" alt="Pitch Ledger Sales Reports tab showing outstanding invoices, monthly totals, and a quarterly filing snapshot">
+            <figcaption>Sales Reports &mdash; outstanding invoices, monthly totals, and a quarterly tax snapshot for filing.</figcaption>
+          </figure>
+          <figure class="project-figure project-figure-portrait">
+            <img src="../images/pitch-ledger/screenshot-3.png" alt="Pitch Ledger Appointments tab with a next-2-weeks list and a month calendar view">
+            <figcaption>Appointments &mdash; next-two-weeks list plus a full month calendar.</figcaption>
+          </figure>
+          <figure class="project-figure project-figure-portrait">
+            <img src="../images/pitch-ledger/screenshot-4.png" alt="Pitch Ledger Invoicing tab with sections for not yet invoiced, invoiced not yet paid, and paid in the last two weeks">
+            <figcaption>Invoicing &mdash; draft, send, and mark paid, with Email / Text / Copy actions and a Venmo link per invoice.</figcaption>
+          </figure>
+          <figure class="project-figure project-figure-portrait">
+            <img src="../images/pitch-ledger/screenshot-5.png" alt="Pitch Ledger Follow-ups tab with sections for future appointment reminders, customers due for the next tuning, and post-appointment check-ins">
+            <figcaption>Follow-ups &mdash; future-appointment reminders, customers due for the next tuning, and post-appointment check-ins.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Features</p>
+          <h2>What it does</h2>
+        </div>
+        <div class="checklist-grid">
+          <div class="list-card">
+            <h3>Customers and Appointments</h3>
+            <ul>
+              <li>Full customer CRUD: name, address, email, phone, reminder preferences, notes</li>
+              <li>Appointments tracked with date, status, base price, tax, and notes</li>
+              <li>Per-user ACLs so each business's data is private</li>
+            </ul>
+          </div>
+          <div class="list-card">
+            <h3>Money</h3>
+            <ul>
+              <li>Quarterly sales and tax rollups for filing</li>
+              <li>Draft invoices by email or SMS with a Venmo payment link baked in</li>
+            </ul>
+          </div>
+          <div class="list-card">
+            <h3>Outreach</h3>
+            <ul>
+              <li>Reminder queue based on each customer's last completed appointment</li>
+              <li>Follow-up queue for post-service check-ins</li>
+              <li>Marketing blasts with smart exclusion so recently serviced customers don't get pestered</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Stack</p>
+          <h2>How it's built</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The frontend is a Vite-built TypeScript PWA that runs as a single
+            installable app on any modern phone or browser. State and storage
+            live in
+            <a href="https://www.back4app.com/" target="_blank" rel="noreferrer">Parse Server (Back4App)</a>,
+            with Parse classes for <code>Customer</code>,
+            <code>Appointment</code>, <code>Business_Settings</code>, and
+            <code>CommunicationLog</code>. Every saved object carries an
+            owner-scoped ACL plus <code>ownerId</code>/
+            <code>ownerUsername</code> fields for filtering.
+          </p>
+          <p>
+            Email and SMS go through Parse Cloud Functions instead of opening
+            the device's <code>mailto:</code>/<code>sms:</code> handlers, so
+            the messages are sent from the business identity rather than the
+            phone:
+            <a href="https://resend.com/" target="_blank" rel="noreferrer">Resend</a>
+            for email,
+            <a href="https://www.twilio.com/" target="_blank" rel="noreferrer">Twilio</a>
+            for SMS. Cloud Functions like <code>sendBusinessEmail</code>,
+            <code>sendBusinessSms</code>, and <code>sendMarketingBlast</code>
+            do the actual delivery and write back to the
+            <code>CommunicationLog</code>.
+          </p>
+          <p>
+            Deployment is via GitHub Pages with a custom domain
+            (<code>ppcm.ulrichlabs.dev</code>); a GitHub Actions workflow
+            builds and publishes on push to <code>main</code>, with
+            environment-specific Parse keys held as repository secrets.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../lightbox.js"></script>
+</body>
+</html>
