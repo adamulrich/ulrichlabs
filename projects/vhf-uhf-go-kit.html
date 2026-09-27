@@ -133,61 +133,97 @@
             The go kit is intended to support voice and FM-based digital modes,
             including Packet/Winlink, APRS, fldigi, and FM FT8.
           </p>
+          <div class="problem-card">
           <h3>Problem 1</h3>
+          <figure class="project-figure problem-thumbnail">
+            <img src="../images/ham-radio/go-kit/back-view.jpg" alt="Back view of the radio hardcase showing the external connections">
+            <figcaption>Back view showing the radio's external audio and data connections.</figcaption>
+          </figure>
           <ul>
             <li>The DigiRig requires a connection to the external speaker port.</li>
             <li>The audio port is difficult to reach once the radio is installed in the 2U hardcase.</li>
             <li>The RT-95 disables its internal speaker as soon as something is plugged into the external speaker port.</li>
           </ul>
-          <h3>Solution</h3>
+          <h4>Solution</h4>
           <ul>
             <li>An A/B RJ45 switch, A/B audio switch, and external speaker wired correctly support Winlink and voice communications. Together, the audio switch and external speaker provide a practical way to move between radio audio and DigiRig audio.</li>
           </ul>
+          </div>
 
+          <div class="problem-card">
           <h3>Problem 2</h3>
+          <figure class="project-figure problem-thumbnail">
+            <img src="../images/ham-radio/go-kit/scad.png" alt="Parametric SCAD design for the custom go-kit faceplate">
+            <figcaption>Parametric SCAD design used to iterate on the faceplate.</figcaption>
+          </figure>
           <ul>
             <li>You cannot lock down a faceplate design until all of the components are positioned. Cutting a piece of wood or sheet metal makes iteration challenging.</li>
           </ul>
-          <h3>Solution</h3>
+          <h4>Solution</h4>
           <ul>
             <li>Use AI to generate 3D-printable parametric SCAD files and iterate on the faceplate design.</li>
           </ul>
+          </div>
 
+          <div class="problem-card">
           <h3>Problem 3</h3>
+          <figure class="project-figure problem-thumbnail">
+            <img src="../images/ham-radio/go-kit/pins-in-jack-pcb.jpg" alt="Audio jack PCB prepared with pins for the speaker connection">
+            <figcaption>Pins used to make the small speaker connection easier to service.</figcaption>
+          </figure>
           <ul>
             <li>Mounting the speaker to the faceplate while protecting the wiring during disassembly is difficult. The speaker connection points are tiny, and the small wires are fragile.</li>
           </ul>
-          <h3>Solution</h3>
+          <h4>Solution</h4>
           <ul>
             <li>Add a 3.5mm jack to the speaker and use a standard audio cable for the connection to the A/B switch.</li>
           </ul>
+          </div>
 
+          <div class="problem-card">
           <h3>Problem 4</h3>
+          <figure class="project-figure problem-thumbnail">
+            <img src="../images/ham-radio/go-kit/shelf-cutout-for-ac.jpg" alt="Shelf cutout made for clearance around the AC power outlet">
+            <figcaption>Shelf cutout providing the required AC outlet clearance.</figcaption>
+          </figure>
           <ul>
             <li>The AC power connection requires a 2-inch hole. The 2U case is 3.5 inches high, but the shelf sits at 1.75 inches.</li>
           </ul>
-          <h3>Solution</h3>
+          <h4>Solution</h4>
           <ul>
             <li>Cut a section from the shelf to provide the outlet clearance needed.</li>
           </ul>
+          </div>
 
+          <div class="problem-card">
           <h3>Problem 5</h3>
+          <figure class="project-figure problem-thumbnail">
+            <img src="../images/ham-radio/go-kit/switch-mounts.jpg" alt="Switch mounts and wiring routed beneath the radio shelf">
+            <figcaption>Under-shelf routing and mounting around the oval pass-throughs.</figcaption>
+          </figure>
           <ul>
             <li>The oval holes in the shelf are not wide enough for some of the wires to pass through.</li>
           </ul>
-          <h3>Solution</h3>
+          <h4>Solution</h4>
           <ul>
             <li>Drill a hole in the shelf by widening one of the oval openings.</li>
           </ul>
+          </div>
 
+          <div class="problem-card">
           <h3>Problem 6</h3>
+          <figure class="project-figure problem-thumbnail">
+            <img src="../images/ham-radio/go-kit/final-test-fit.jpg" alt="Final faceplate test fit in the radio hardcase">
+            <figcaption>Final faceplate test fit before securing the center section.</figcaption>
+          </figure>
           <ul>
             <li>The center faceplate section may come loose because it is not screwed to the rails.</li>
           </ul>
-          <h3>Solution</h3>
+          <h4>Solution</h4>
           <ul>
             <li>Add holes to the four corners of the plate so you can drill small pilot holes into the case plastic and secure it.</li>
           </ul>
+          </div>
         </div>
       </section>
 

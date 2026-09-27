@@ -504,21 +504,67 @@ main {
 }
 
 #operating-goals .prose {
-  gap: 0.55rem;
+  gap: 0.7rem;
+}
+
+#operating-goals .problem-card {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: 0.8rem 1.1rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+#operating-goals .problem-card > :not(.problem-thumbnail) {
+  grid-column: 2;
+}
+
+#operating-goals .problem-card .problem-thumbnail {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  width: 100%;
+  margin: 0;
 }
 
 #operating-goals h3 {
-  margin-top: 0.35rem;
+  margin-top: 0;
   font-size: 1.2rem;
 }
 
+#operating-goals h4 {
+  margin: 0.15rem 0 0;
+  color: var(--accent-strong);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 #operating-goals ul {
-  margin: 0 0 0.45rem;
+  margin: 0;
   padding-left: 1.4rem;
 }
 
 #operating-goals li {
   line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+  #operating-goals .problem-card {
+    grid-template-columns: 1fr;
+  }
+
+  #operating-goals .problem-card > :not(.problem-thumbnail) {
+    grid-column: 1;
+  }
+
+  #operating-goals .problem-card .problem-thumbnail {
+    grid-column: 1;
+    grid-row: auto;
+    width: min(100%, 320px);
+  }
 }
 
 .prose a,
@@ -763,6 +809,16 @@ main {
 .build-step-figure {
   width: min(100%, 560px);
   justify-self: start;
+}
+
+.problem-thumbnail {
+  width: min(100%, 320px);
+  justify-self: start;
+}
+
+.problem-thumbnail img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .component-grid {
