@@ -126,27 +126,68 @@
       <section class="panel content-stack" id="operating-goals">
         <div class="section-heading">
           <p class="eyebrow">Operating Goals</p>
-          <h2>Voice and digital modes</h2>
+          <h2>Goals, Problems, Solutions</h2>
         </div>
         <div class="prose">
           <p>
             The go kit is intended to support voice and FM-based digital modes,
             including Packet/Winlink, APRS, fldigi, and FM FT8.
           </p>
-          <p>
-            The RJ45 switch, audio switch, and external speaker are necessary to
-            support Winlink communications. The audio port is difficult to reach
-            once the radio is installed in the 2U hardcase, and the DigiRig cable
-            needs to be connected to both the mic port and the speaker-out port.
-          </p>
-          <p>
-            An RJ45 A/B switch provides a way to switch between the DigiRig and
-            the microphone input. An audio A/B switch handles the audio output.
-            The RT-95 disables its internal speaker as soon as something is
-            plugged into the external speaker port, so the audio switch and
-            external speaker provide the practical way to move between radio
-            audio and DigiRig audio.
-          </p>
+          <h3>Problem 1</h3>
+          <ul>
+            <li>The DigiRig requires a connection to the external speaker port.</li>
+            <li>The audio port is difficult to reach once the radio is installed in the 2U hardcase.</li>
+            <li>The RT-95 disables its internal speaker as soon as something is plugged into the external speaker port.</li>
+          </ul>
+          <h3>Solution</h3>
+          <ul>
+            <li>An A/B RJ45 switch, A/B audio switch, and external speaker wired correctly support Winlink and voice communications. Together, the audio switch and external speaker provide a practical way to move between radio audio and DigiRig audio.</li>
+          </ul>
+
+          <h3>Problem 2</h3>
+          <ul>
+            <li>You cannot lock down a faceplate design until all of the components are positioned. Cutting a piece of wood or sheet metal makes iteration challenging.</li>
+          </ul>
+          <h3>Solution</h3>
+          <ul>
+            <li>Use AI to generate 3D-printable parametric SCAD files and iterate on the faceplate design.</li>
+          </ul>
+
+          <h3>Problem 3</h3>
+          <ul>
+            <li>Mounting the speaker to the faceplate while protecting the wiring during disassembly is difficult. The speaker connection points are tiny, and the small wires are fragile.</li>
+          </ul>
+          <h3>Solution</h3>
+          <ul>
+            <li>Add a 3.5mm jack to the speaker and use a standard audio cable for the connection to the A/B switch.</li>
+          </ul>
+
+          <h3>Problem 4</h3>
+          <ul>
+            <li>The AC power connection requires a 2-inch hole. The 2U case is 3.5 inches high, but the shelf sits at 1.75 inches.</li>
+          </ul>
+          <h3>Solution</h3>
+          <ul>
+            <li>Cut a section from the shelf to provide the outlet clearance needed.</li>
+          </ul>
+
+          <h3>Problem 5</h3>
+          <ul>
+            <li>The oval holes in the shelf are not wide enough for some of the wires to pass through.</li>
+          </ul>
+          <h3>Solution</h3>
+          <ul>
+            <li>Drill a hole in the shelf by widening one of the oval openings.</li>
+          </ul>
+
+          <h3>Problem 6</h3>
+          <ul>
+            <li>The center faceplate section may come loose because it is not screwed to the rails.</li>
+          </ul>
+          <h3>Solution</h3>
+          <ul>
+            <li>Add holes to the four corners of the plate so you can drill small pilot holes into the case plastic and secure it.</li>
+          </ul>
         </div>
       </section>
 

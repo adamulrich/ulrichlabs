@@ -503,6 +503,24 @@ main {
   color: var(--muted);
 }
 
+#operating-goals .prose {
+  gap: 0.55rem;
+}
+
+#operating-goals h3 {
+  margin-top: 0.35rem;
+  font-size: 1.2rem;
+}
+
+#operating-goals ul {
+  margin: 0 0 0.45rem;
+  padding-left: 1.4rem;
+}
+
+#operating-goals li {
+  line-height: 1.4;
+}
+
 .prose a,
 .list-card a,
 .software-bullet a {
