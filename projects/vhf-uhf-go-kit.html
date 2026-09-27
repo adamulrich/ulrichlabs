@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VHF/UHF Go Kit | Ulrich Labs</title>
+  <meta
+    name="description"
+    content="Adam Ulrich's VHF/UHF amateur radio go-kit build, including parts, assembly, power, and field-use notes."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="icon" href="../ulrichlabs-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <main class="detail-layout">
+      <section class="panel">
+        <div class="project-hero-layout">
+          <div class="project-hero-copy">
+            <div class="intro-lockup">
+              <a class="site-logo" href="../index.html" aria-label="Ulrich Labs home">
+                <img src="../ulrichlabs-au-icon.svg" alt="Ulrich Labs AU icon">
+              </a>
+              <div class="intro-copy">
+                <p class="eyebrow">Physical Project</p>
+                <h1 class="detail-title">VHF/UHF Go Kit</h1>
+                <p class="detail-lede">
+                  A portable VHF/UHF radio kit for taking amateur radio beyond the
+                  shack. Parts, photos, and build notes will be added as the kit
+                  comes together.
+                </p>
+                <div class="detail-actions">
+                  <a class="button button-secondary" href="ham-radio.html">Back to ham radio</a>
+                  <a class="button button-secondary" href="../index.html">Back to home</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-hero-media">
+            <figure class="project-figure">
+              <img
+                src="../images/ham-radio/go-kit/final-build.jpg"
+                alt="Completed VHF/UHF radio go-kit hardcase with the faceplate installed"
+              >
+              <figcaption>Completed radio hardcase with the faceplate and controls installed.</figcaption>
+            </figure>
+            <figure class="project-figure">
+              <img
+                src="../images/ham-radio/go-kit/cases-closed-ready-to-transport.jpg"
+                alt="Battery box and radio hardcase closed and ready to transport"
+              >
+              <figcaption>Both cases closed and ready for transport.</figcaption>
+            </figure>
+          </div>
+          <nav class="section-jump-nav" aria-label="Go kit sections">
+            <a href="#overview">Overview</a>
+            <a href="#operating-goals">Goals</a>
+            <a href="#supplies">Bill of Materials</a>
+            <a href="#build">Build</a>
+            <a href="#components">Components</a>
+            <a href="#battery-wiring">Battery Wiring</a>
+            <a href="#hardcase-gallery">Hardcase</a>
+            <a href="#battery-gallery">Battery Box</a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="panel content-stack" id="overview">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>The build</h2>
+        </div>
+        <div class="prose">
+          <p>
+            This page will document the decisions behind the go kit, from the
+            radio and antenna to transport, power, storage, and setup in the
+            field.
+          </p>
+          <h3 id="components">Components</h3>
+          <div class="component-grid">
+            <figure class="project-figure component-card">
+              <img src="../images/ham-radio/go-kit/2U Case.jpg" alt="2U hardcase used for the radio go kit">
+              <figcaption>2U hardcase</figcaption>
+            </figure>
+            <figure class="project-figure component-card">
+              <img src="../images/ham-radio/go-kit/shelf.jpg" alt="1U shelf used inside the radio hardcase">
+              <figcaption>1U shelf</figcaption>
+            </figure>
+            <figure class="project-figure component-card">
+              <img src="../images/ham-radio/go-kit/retevis-rt-95.jpg" alt="Retevis RT-95 radio">
+              <figcaption>Retevis RT-95</figcaption>
+            </figure>
+            <figure class="project-figure component-card">
+              <img src="../images/ham-radio/go-kit/digirig-mobile.webp" alt="DigiRig mobile interface">
+              <figcaption>DigiRig</figcaption>
+            </figure>
+            <figure class="project-figure component-card">
+              <img src="../images/ham-radio/go-kit/rj45-ab-switch.jpg" alt="RJ45 A/B switch for the microphone connection">
+              <figcaption>Mic A/B switch</figcaption>
+            </figure>
+            <figure class="project-figure component-card">
+              <img src="../images/ham-radio/go-kit/audio-ab-switch.jpg" alt="Audio A/B switch for the speaker connection">
+              <figcaption>Audio A/B switch</figcaption>
+            </figure>
+            <figure class="project-figure component-card">
+              <img src="../images/ham-radio/go-kit/power-supply.jpg" alt="Power supply for the radio go kit">
+              <figcaption>Power supply</figcaption>
+            </figure>
+            <div class="project-figure component-card component-model-card">
+              <img src="../images/ham-radio/go-kit/3d-printed-parts.png" alt="Render sheet showing the custom 3D-printed parts for the VHF/UHF go kit">
+              <figcaption>
+                <span>Custom 3D-printed parts</span>
+                <a href="go-kit/RT95-digirig-ac-dc-2U-go-kit.3mf">Download the 3MF file</a>
+              </figcaption>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel content-stack" id="operating-goals">
+        <div class="section-heading">
+          <p class="eyebrow">Operating Goals</p>
+          <h2>Voice and digital modes</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The go kit is intended to support voice and FM-based digital modes,
+            including Packet/Winlink, APRS, fldigi, and FM FT8.
+          </p>
+          <p>
+            The RJ45 switch, audio switch, and external speaker are necessary to
+            support Winlink communications. The audio port is difficult to reach
+            once the radio is installed in the 2U hardcase, and the DigiRig cable
+            needs to be connected to both the mic port and the speaker-out port.
+          </p>
+          <p>
+            An RJ45 A/B switch provides a way to switch between the DigiRig and
+            the microphone input. An audio A/B switch handles the audio output.
+            The RT-95 disables its internal speaker as soon as something is
+            plugged into the external speaker port, so the audio switch and
+            external speaker provide the practical way to move between radio
+            audio and DigiRig audio.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel content-stack parts-panel" id="supplies">
+        <div class="section-heading">
+          <p class="eyebrow">Bill of Materials</p>
+          <h2>Bill of materials</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The current parts list for the battery box, radio go box, antenna
+            options, and supporting hardware is below. Product links open in a
+            new tab for reference. Amazon prices were checked on September 25,
+            2026, and may change.
+          </p>
+          <p>
+            Many of the connectors and other hardware are sold in packs, so
+            this list includes considerably more hardware than this project
+            needs. The two crimping tools should also be useful for many more
+            projects.
+          </p>
+        </div>
+
+        <div class="supply-group">
+          <h3>Battery box</h3>
+          <div class="supply-list">
+            <a class="supply-row" href="https://www.amazon.com/dp/B0FB3FX5KH?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>30Ah LiFePO4 battery</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B000P3WS02?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>Battery box case</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0F4L5FYQ2?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>Powerpole connector</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B07T9HC65T?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>Battery connection cluster</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B09MKL2LCX?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>Charger</span><strong>Amazon</strong></a>
+          </div>
+        </div>
+
+        <details class="supplies-more">
+          <summary>Show all remaining items</summary>
+          <div class="supplies-more-content">
+        <div class="supply-group">
+          <h3>Go box</h3>
+          <div class="supply-list">
+            <a class="supply-row" href="https://www.amazon.com/dp/B0CLR2LQMW?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>2U 19-inch hard case</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B01HTG4WHY?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;th=1" target="_blank" rel="noreferrer"><span>Rack</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B075M9QV8P?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>Retevis RT-95 UHF/VHF radio</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/Digirig-Mobile-Integrated-Digital-Interface/dp/B095B9C15R" target="_blank" rel="noreferrer"><span>DigiRig Mobile digital interface</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0BRGZB83C" target="_blank" rel="noreferrer"><span>Audio A/B switch</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B096Y8J2H7" target="_blank" rel="noreferrer"><span>RJ45 A/B switch</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B07D9FTC77?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_16" target="_blank" rel="noreferrer"><span>Power supply</span><strong>Amazon</strong></a>
+          </div>
+        </div>
+
+        <div class="supply-group">
+          <h3>Go box connections</h3>
+          <div class="supply-list">
+            <a class="supply-row" href="https://www.amazon.com/dp/B09HWSFRP1?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>USB connection for DigiRig</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0B84QC79K?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>Power source switch</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0BJ6NXWYN?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>Mic jack</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0BMLMBJKK?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>Antenna jack</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0F4L5FYQ2" target="_blank" rel="noreferrer"><span>Powerpole connector</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0DYJGNSMX" target="_blank" rel="noreferrer"><span>Line power connector</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B08BPHCXR3" target="_blank" rel="noreferrer"><span>Ferrites for power supply</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0FDJYRGB7?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noreferrer"><span>Fuse</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B091YFR9MD" target="_blank" rel="noreferrer"><span>Short PL-259 cables</span><strong>Amazon</strong></a>
+          </div>
+        </div>
+
+        <div class="supply-group">
+          <h3>Antennas</h3>
+          <div class="supply-list">
+            <a class="supply-row" href="https://www.amazon.com/42-5-Inch-ABBREE-SMA-Female-Foldable-Transceiver/dp/B0852VG8WQ/ref=dp_prsubs_d_sccl_2/139-0822768-1618169?pd_rd_w=XvJcr&amp;content-id=amzn1.sym.e7ebf3f5-0060-453e-b98d-871d9e891701&amp;pf_rd_p=e7ebf3f5-0060-453e-b98d-871d9e891701&amp;pf_rd_r=SFD5JHJAMP29E4R73QBX&amp;pd_rd_wg=YLXQT&amp;pd_rd_r=819bc515-2e87-4f5a-ad96-c71c9e892c79&amp;pd_rd_i=B0852VG8WQ&amp;psc=1" target="_blank" rel="noreferrer"><span>42.5-inch ABBREE foldable antenna</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B088P9H3V7" target="_blank" rel="noreferrer"><span>Cookie sheet</span><strong>Amazon</strong></a>
+            <a class="supply-row" data-price="33.99" href="https://n9taxlabs.com/products/dual-band-murs-gmrs-standard-slim-jim-antenna-no-integrated-cable?variant=51928364777758" target="_blank" rel="noreferrer"><span>Dual-band MURS/GMRS Slim Jim antenna</span><strong>N9TAX Labs $33.99</strong></a>
+          </div>
+        </div>
+
+        <div class="supply-group">
+          <h3>Other hardware</h3>
+          <div class="supply-list">
+            <a class="supply-row" href="https://www.amazon.com/dp/B0DK1SCV46" target="_blank" rel="noreferrer"><span>M3x4x5 threaded inserts</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0CTGZ1QGK" target="_blank" rel="noreferrer"><span>10/32 x 1-inch screws</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B09K3VB4NX" target="_blank" rel="noreferrer"><span>Mono audio cables</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0DYDT1KTW" target="_blank" rel="noreferrer"><span>2-inch speaker</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B08H8DR7ZW" target="_blank" rel="noreferrer"><span>Female 3.5mm audio jack</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0G6LKP541" target="_blank" rel="noreferrer"><span>Powerpole connectors</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0BYHKXGPC" target="_blank" rel="noreferrer"><span>Right-angle RJ45 cable</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B09VSF5TV2" target="_blank" rel="noreferrer"><span>Wire connectors</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B08FCL69QZ" target="_blank" rel="noreferrer"><span>T-type power connectors</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B08G8CQBL8" target="_blank" rel="noreferrer"><span>Powerpole crimper</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B0D9Y5XFQC" target="_blank" rel="noreferrer"><span>Wire connectors</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B086Z2Y1D6" target="_blank" rel="noreferrer"><span>Heat-shrink wire connectors</span><strong>Amazon</strong></a>
+            <a class="supply-row" href="https://www.amazon.com/dp/B07S4HDGK9" target="_blank" rel="noreferrer"><span>Connector crimper</span><strong>Amazon</strong></a>
+          </div>
+        </div>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel content-stack" id="build">
+        <div class="section-heading">
+          <p class="eyebrow">Build</p>
+          <h2>Assembly and field setup</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The following notes cover the physical modifications, wiring, and
+            assembly sequence for the radio hardcase.
+          </p>
+          <h3>Shelf Mods</h3>
+          <ol>
+            <li>Drill a hole in the left side of the shelf for a wire passthrough. I widened an existing hole five rows back from the front.</li>
+            <li>Using an angle grinder, cut out the section of the shelf in front of the left two holes. This provides clearance for the AC power socket.</li>
+          </ol>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/shelf-cutout-for-ac.jpg" alt="Shelf cutout made for clearance around the AC power socket">
+            <figcaption>The shelf cutout provides clearance for the AC power socket.</figcaption>
+          </figure>
+
+          <h3>3D-Printed Parts</h3>
+          <ol>
+            <li>Print all the parts.</li>
+            <li>In the two A/B switch mounts, use a soldering iron to insert an M3x4x5 threaded brass insert into each standoff. The inserts should be flush with the top of the standoff.</li>
+          </ol>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/standoff-threaded-insert.jpg" alt="M3 threaded brass insert installed flush in a printed standoff">
+            <figcaption>Heat-set the M3 brass inserts flush with the tops of the switch-mount standoffs.</figcaption>
+          </figure>
+
+          <h3>Top of the Shelf</h3>
+          <ol>
+            <li>Mount the power supply as shown using screws and nuts.</li>
+            <li>Mount the radio bracket to the shelf using screws and nuts.</li>
+            <li>Mount the DigiRig holder using screws and nuts.</li>
+          </ol>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/switch-mounts.jpg" alt="Printed switch mounts and the DigiRig mount installed on the shelf">
+            <figcaption>Switch and DigiRig mounting hardware installed on the top of the shelf.</figcaption>
+          </figure>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/initial-shelf-layout.jpg" alt="Initial layout of the power supply, radio bracket, and DigiRig holder on the shelf">
+            <figcaption>Initial shelf layout showing the power supply, radio bracket, and DigiRig holder positions.</figcaption>
+          </figure>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/radio-bracket-test.jpg" alt="Radio bracket test fitted inside the hardcase">
+            <figcaption>Test fit the radio bracket before fastening it to the shelf.</figcaption>
+          </figure>
+
+          <h3>Bottom of the Shelf</h3>
+          <ol>
+            <li>Mount the RJ45 A/B switch underneath the radio bracket as shown, using the M3 screws and printed washers.</li>
+            <li>Mount the audio A/B switch underneath the radio bracket as shown, using the M3 screws and printed washers.</li>
+          </ol>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/switch-mounts.jpg" alt="Printed A/B switch mounts installed below the radio shelf">
+            <figcaption>The RJ45 and audio A/B switch mounts installed below the radio shelf.</figcaption>
+          </figure>
+
+          <h3>Power Wiring</h3>
+          <ul>
+            <li>Create a common ground using the black wire for the power supply output and the Powerpole input.</li>
+            <li>The power switch selects which hot (red) power source to use.</li>
+            <li>Flipping the switch to the left makes contact with the right terminal. I oriented the switch left and right so the switch points toward the AC or DC input. Wire the DC input on the left to the right terminal, and wire the power supply output hot wire to the left terminal.</li>
+            <li>Wire the center terminal on the switch to the fuse, which then connects to the radio.</li>
+          </ul>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/top-view.jpg" alt="Top view of the shelf with the power wiring routed between components">
+            <figcaption>Top-side view of the power wiring routed between the mounted components.</figcaption>
+          </figure>
+
+          <h3>Faceplate</h3>
+          <ul>
+            <li>Mount the speaker to the center faceplate using M3 screws and nuts.</li>
+            <li>I chose to wire a 3.5mm audio jack to the speaker terminals using straight pins from breadboards. The jack could be skipped and wired directly to the speaker, but I am hoping the jack will make maintenance more durable.</li>
+          </ul>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/mount-speaker.jpg" alt="Speaker mounted to the center faceplate with the audio jack mount beside it">
+            <figcaption>Mount the speaker and secure the audio jack PCB beside it.</figcaption>
+          </figure>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/audio-jack.jpg" alt="Audio jack PCB prepared for the external speaker connection">
+            <figcaption>Prepare the audio jack PCB for the external speaker connection.</figcaption>
+          </figure>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/solder-pins.jpg" alt="Soldered audio jack pins for the mono speaker circuit">
+            <figcaption>Solder the tip and ground connections for the mono speaker circuit.</figcaption>
+          </figure>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/pins-in-jack-pcb.jpg" alt="Straight breadboard pins soldered to the audio jack PCB">
+            <figcaption>Straight breadboard pins used to connect the 3.5mm audio jack to the speaker terminals.</figcaption>
+          </figure>
+
+          <p>
+            The remaining wire routing is left to the builder to arrange as
+            appropriate. The build photographs provide routing examples.
+          </p>
+
+          <h3>A/B Switches</h3>
+          <p>
+            The microphone output and speaker output on the back of the radio
+            connect to the I/O ports on the switches. I used a 90-degree
+            right-angle RJ45 6-inch cable (in the parts list) and routed it
+            just below the shelf.
+          </p>
+          <ul>
+            <li>Wire RJ45 A to the mic jack on the center faceplate.</li>
+            <li>Wire RJ45 B to the DigiRig cable.</li>
+            <li>Wire audio A to the speaker on the faceplate.</li>
+            <li>Wire audio B to the DigiRig cable.</li>
+          </ul>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/bottom-view.jpg" alt="Bottom view of the shelf showing the A/B switch mounts and cable routing">
+            <figcaption>Bottom view showing the A/B switch mounts and cable routing.</figcaption>
+          </figure>
+          <h3>Final Assembly</h3>
+          <ul>
+            <li>Mount the radio using the thumbscrews.</li>
+            <li>Attach the port cables to the center and right panels.</li>
+            <li>Insert the spacer behind the panel. Check the orientation so the curve matches the case, the holes line up, and the cutout aligns with the shelf. Then screw the right panel in place.</li>
+            <li>Insert the center panel. Note that the panels use a tongue-and-groove fit. Ensure that you have removed the 3D supports under the tongue and in the groove.</li>
+            <li>Insert the left panel, again using the spacer and aligning the tongue and groove, then screw it into place.</li>
+            <li>Drill pilot holes into the center-section corner holes, then gently hand-tighten screws into those holes. The plastic is thin, and it is easy to strip the screws.</li>
+          </ul>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/insert-spacer.jpg" alt="Printed spacer and mounting hardware positioned during final assembly">
+            <figcaption>Use the printed spacers and mounting hardware during final assembly.</figcaption>
+          </figure>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/final-assembly-back-view.jpg" alt="Back view of the final radio hardcase assembly">
+            <figcaption>Back view of the final radio hardcase assembly.</figcaption>
+          </figure>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/final-assembly.jpg" alt="Radio hardcase during final assembly with the shelf and wiring visible">
+            <figcaption>Final assembly with the shelf, radio, and wiring in place.</figcaption>
+          </figure>
+
+          <p>
+            The custom enclosure and mounting parts are available as a single
+            3MF project file for reference or further modification.
+          </p>
+        </div>
+        <div class="detail-actions">
+          <a class="model-tile" href="go-kit/RT95-digirig-ac-dc-2U-go-kit.3mf">
+            <img
+              src="../images/ham-radio/go-kit/3d-printed-parts.png"
+              alt="Render sheet showing the custom 3D-printed parts for the VHF/UHF go kit"
+            >
+            <span>
+              <strong>Download the RT-95 go-kit 3MF</strong>
+              <small>Custom enclosure and mounting parts</small>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel content-stack battery-wiring" id="battery-wiring">
+        <div class="section-heading">
+          <p class="eyebrow">Battery Box Wiring</p>
+          <h2>Power and switch wiring</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The faceplate was used as the drilling guide for the holes in the
+            front of the radio hardcase.
+          </p>
+          <ul>
+            <li>The front-panel on/off switch is not required to be on in order to use the battery. The two paths are wired in parallel using 2x1 wire connectors.</li>
+            <li>The front-panel wiring guide covers the main connections. For the switch wiring, the gold lead is ground, the center lead is the hot wire to the battery, and the top lead goes to the daisy chain of ports.</li>
+            <li>There is an extra black lead that is not used; cut it off.</li>
+            <li>Powerpole connectors were installed to make battery swaps and maintenance easier.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel content-stack battery-gallery" id="battery-gallery">
+        <div class="section-heading">
+          <p class="eyebrow">Gallery Two</p>
+          <h2>Battery box</h2>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/battery-box-down-view.jpg" alt="Battery box viewed from above with the battery and wiring visible">
+            <figcaption>Top-down view of the battery box and its internal layout.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/battery-box-loaded.jpg" alt="Loaded battery box with the battery, wiring, and storage area in place">
+            <figcaption>The battery box loaded with the battery, wiring, and stored cables.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/battery-box-open.jpg" alt="Open battery box showing the battery and internal wiring">
+            <figcaption>Open battery box with the battery and internal wiring visible.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/battery-box-tray.jpg" alt="Battery box tray holding the battery and power components">
+            <figcaption>The battery tray and its mounted power components.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/battery-box-wires-exposed.jpg" alt="Battery box with wiring exposed for inspection">
+            <figcaption>Wiring exposed for inspection and maintenance.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/battery-wiring-2.jpg" alt="Battery box wiring and Powerpole connections">
+            <figcaption>Battery wiring and Powerpole connections inside the box.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/battery-wiring-closeup.jpg" alt="Close-up of battery box wiring and connectors">
+            <figcaption>Close-up of the battery wiring, fuse, and connector cluster.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/battery-wiring.jpg" alt="Battery box wiring routed around the battery">
+            <figcaption>Battery wiring routed around the battery and internal supports.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/completed-battery-box.jpg" alt="Completed battery box with the external power panel installed">
+            <figcaption>Completed battery box with the external power panel installed.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel content-stack hardcase-gallery" id="hardcase-gallery">
+        <div class="section-heading">
+          <p class="eyebrow">Gallery One</p>
+          <h2>Radio hardcase</h2>
+        </div>
+        <div class="figure-grid">
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/initial-wiring-test.jpg" alt="Initial wiring test with the radio, power supply, and DigiRig on the workbench">
+            <figcaption>Initial wiring test before the parts were mounted in the case.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/final-test-fit.jpg" alt="Radio hardcase with the switches in a test fit">
+            <figcaption>First test fit of the custom faceplate in the hardcase.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/first-test-fit.jpg" alt="First test fit of the custom faceplate in the radio hardcase">
+            <figcaption>Test fit of the switches shows they are about 1 cm too far left. Time to update the SCAD file and print another.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/end-caps.jpg" alt="Printed end caps for the radio hardcase enclosure">
+            <figcaption>End caps prepared for the hardcase enclosure.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/final-faceplate-test.jpg" alt="Custom faceplate with the radio controls and connector openings test fitted">
+            <figcaption>Faceplate test fit before final assembly.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/powered-up-ac.jpg" alt="Radio hardcase powered from AC with the controls lit">
+            <figcaption>Powered-up test using the AC input.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/powered-up-dc.jpg" alt="Radio hardcase powered from the DC battery input">
+            <figcaption>Powered-up test using the DC battery input.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/back-view.jpg" alt="Back view of the completed radio hardcase with connectors and cables">
+            <figcaption>Back view of the hardcase and its external connections.</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="../images/ham-radio/go-kit/3d-printed-parts.png" alt="Render sheet showing the custom 3D-printed parts for the VHF/UHF go kit">
+            <figcaption>Render sheet of the custom 3D-printed brackets, covers, mounts, spacers, and enclosure parts.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../collapsible-sections.js"></script>
+  <script src="../supply-prices.js"></script>
+  <script src="../lightbox.js"></script>
+</body>
+</html>

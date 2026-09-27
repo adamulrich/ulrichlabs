@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="lightbox-backdrop" data-lightbox-close></div>
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded image">
       <button class="lightbox-close" type="button" aria-label="Close image viewer" data-lightbox-close>&times;</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">&#8592;</button>
       <img class="lightbox-image" alt="">
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">&#8594;</button>
     </div>
   `;
 
@@ -22,7 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const dialogImage = overlay.querySelector(".lightbox-image");
   const closeElements = overlay.querySelectorAll("[data-lightbox-close]");
+  const previousButton = overlay.querySelector(".lightbox-prev");
+  const nextButton = overlay.querySelector(".lightbox-next");
   let lastActiveElement = null;
+  let currentIndex = 0;
 
   function closeLightbox() {
     overlay.classList.remove("lightbox-open");
@@ -35,14 +40,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function openLightbox(image) {
-    lastActiveElement = document.activeElement;
+  function showImage(index) {
+    currentIndex = (index + images.length) % images.length;
+    const image = images[currentIndex];
     dialogImage.src = image.currentSrc || image.src;
     dialogImage.alt = image.alt || "";
+  }
+
+  function openLightbox(image) {
+    lastActiveElement = document.activeElement;
+    showImage(images.indexOf(image));
     overlay.classList.add("lightbox-open");
     overlay.setAttribute("aria-hidden", "false");
     document.body.classList.add("lightbox-active");
     overlay.querySelector(".lightbox-close").focus();
+  }
+
+  function showPreviousImage() {
+    showImage(currentIndex - 1);
+  }
+
+  function showNextImage() {
+    showImage(currentIndex + 1);
   }
 
   images.forEach((image) => {
@@ -64,9 +83,22 @@ document.addEventListener("DOMContentLoaded", () => {
     element.addEventListener("click", closeLightbox);
   });
 
+  previousButton.addEventListener("click", showPreviousImage);
+  nextButton.addEventListener("click", showNextImage);
+
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && overlay.classList.contains("lightbox-open")) {
+    if (!overlay.classList.contains("lightbox-open")) {
+      return;
+    }
+
+    if (event.key === "Escape") {
       closeLightbox();
+    } else if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showPreviousImage();
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showNextImage();
     }
   });
 });
