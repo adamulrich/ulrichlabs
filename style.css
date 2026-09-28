@@ -821,6 +821,12 @@ main {
   object-fit: cover;
 }
 
+.problem-detail-figure {
+  grid-column: 1 !important;
+  width: min(100%, 420px);
+  margin: 0;
+}
+
 .component-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
