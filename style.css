@@ -827,6 +827,23 @@ main {
   margin: 0;
 }
 
+.problem-detail-video {
+  grid-column: 1 !important;
+  width: min(100%, 420px);
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #1f1d19;
+}
+
+.build-step-video {
+  display: block;
+  width: min(100%, 560px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #1f1d19;
+}
+
 .component-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
