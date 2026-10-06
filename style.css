@@ -522,6 +522,14 @@ main {
   grid-column: 2;
 }
 
+#operating-goals .problem-card.problem-card-text-only {
+  grid-template-columns: 1fr;
+}
+
+#operating-goals .problem-card.problem-card-text-only > :not(.problem-thumbnail) {
+  grid-column: 1;
+}
+
 #operating-goals .problem-card .problem-thumbnail {
   grid-column: 1;
   grid-row: 1 / span 4;

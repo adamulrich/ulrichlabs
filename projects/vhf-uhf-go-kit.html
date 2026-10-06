@@ -296,6 +296,20 @@
             <figcaption>Threaded insert with soldering iron example.</figcaption>
           </figure>
           </div>
+
+          <div class="problem-card">
+          <h3>Problem 10</h3>
+          <figure class="project-figure problem-thumbnail">
+            <img src="../images/ham-radio/go-kit/digirig-move-fuse-placement.jpg" alt="DigiRig moved to the back edge of the shelf with fuse access visible">
+            <figcaption>DigiRig moved to the back edge with the fuse access point kept reachable.</figcaption>
+          </figure>
+          <p>The DigiRig was placed too far inside the case to remove easily, and the radio has two 10-amp fuses: the attached AGC fuse and the inline ATO fuse. Either fuse could blow, but the more accessible ATO fuse should be the intended failure point.</p>
+          <h4>Solution</h4>
+          <ul>
+            <li>Move the DigiRig to the back edge of the shelf and add a 6-inch right-angle USB-C extension cable for easier access.</li>
+            <li>Replace the radio's attached 10-amp AGC fuse with a 30-amp AGC fuse so the inline 10-amp ATO fuse fails first.</li>
+          </ul>
+          </div>
         </div>
       </section>
 
@@ -428,11 +442,16 @@
           <ol>
             <li>Mount the power supply as shown using screws and nuts.</li>
             <li>Mount the radio bracket to the shelf using screws and nuts.</li>
-            <li>Mount the DigiRig holder using screws and nuts.</li>
+            <li>Mount the DigiRig holder using screws and nuts, positioning the DigiRig at the back edge of the shelf for easier removal.</li>
+            <li>Use a 6-inch right-angle USB-C extension cable so the DigiRig connection remains accessible.</li>
           </ol>
           <figure class="project-figure build-step-figure">
             <img src="../images/ham-radio/go-kit/switch-mounts.jpg" alt="Printed switch mounts and the DigiRig mount installed on the shelf">
             <figcaption>Switch and DigiRig mounting hardware installed on the top of the shelf.</figcaption>
+          </figure>
+          <figure class="project-figure build-step-figure">
+            <img src="../images/ham-radio/go-kit/digirig-move-fuse-placement.jpg" alt="DigiRig moved to the back edge of the shelf with fuse access visible">
+            <figcaption>Move the DigiRig to the back edge and keep the fuse access point reachable.</figcaption>
           </figure>
           <figure class="project-figure build-step-figure">
             <img src="../images/ham-radio/go-kit/initial-shelf-layout.jpg" alt="Initial layout of the power supply, radio bracket, and DigiRig holder on the shelf">
@@ -459,6 +478,7 @@
             <li>The power switch selects which hot (red) power source to use.</li>
             <li>Flipping the switch to the left makes contact with the right terminal. I oriented the switch left and right so the switch points toward the AC or DC input. Wire the DC input on the left to the right terminal, and wire the power supply output hot wire to the left terminal.</li>
             <li>Wire the center terminal on the switch to the fuse, which then connects to the radio.</li>
+            <li>Replace the 10-amp AGC fuse attached to the radio with a 30-amp AGC fuse so the inline 10-amp ATO fuse is the accessible fuse that fails first.</li>
           </ul>
           <figure class="project-figure build-step-figure">
             <img src="../images/ham-radio/go-kit/new-power-supply-2.jpg" alt="Top plate view showing the upgraded power supply and routed power wiring">
